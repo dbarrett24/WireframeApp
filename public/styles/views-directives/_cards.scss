@@ -1,0 +1,57 @@
+@import '_variables';
+@import '_mixins';
+.card{
+    //Below mixin takes 'warm', 'cool', 'value'
+    @include use-linear-gradients(value);
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    margin: 40px 40px;
+    border-radius: $border-radius-huge;
+
+    .card-footer{
+        @include flex-between-vert-center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 50px;
+        background: white;
+        padding: 0 13px;
+    }
+
+}
+
+.card-add{
+    background-color: white;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    margin: 40px 40px;
+    border-radius: $border-radius-huge;
+
+    .add-new{
+        height: 100%;
+        width: 100%;
+        @include vert-align-center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h4{
+        margin-top: 20px;
+    }
+}
+
+.card-add:hover{
+    background-color: $grey-300;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    margin: 40px 40px;
+    border-radius: $border-radius-huge;
+}

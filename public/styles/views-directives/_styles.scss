@@ -1,0 +1,95 @@
+//BACKGROUND IMAGE
+html{
+    background: url('../images/mainBG.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+.content{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255,255,255,0.6);
+    padding: 50px;
+
+}
+
+.view-wrapper{
+    display: flex;
+}
+
+
+
+
+.content2{
+    @include vert-align-center;
+    position: relative;
+    height: 700px;
+    width: 100vw;
+    background: rgba(0,0,0,1);
+
+
+    .hero-left{
+        @include vert-align-center;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        .hero-text-wrap{
+            width: 550px;
+            margin-right: 60px;
+            
+            .font-white{
+                margin-bottom: 20px;
+            }
+            .button{
+                margin: 35px 0 0 0;
+            }
+        }
+    }
+    .hero-right{
+        @include vert-align-center;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+
+        img{
+            margin-right: 60px;
+
+        }
+    }
+}
+
+
+.content3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 700px;
+    width: 100vw;
+    background: #1A1B1F;
+    padding: 100px;
+
+    video{
+        margin-top: 60px;
+        border-radius: 6px;
+        box-shadow: $card-shadow;
+    }
+}
+
+
+
+
+#container {
+  box-shadow: inset 0 1px 0 #444, 0 -1px 0 #000;
+  height: 140px;
+  left: 2%;
+  margin: -70px 0 0 -60px;
+  position: absolute;
+  top: 71px;
+  width: 100%;
+}
+
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}

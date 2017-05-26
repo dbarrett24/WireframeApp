@@ -1,0 +1,151 @@
+.nav-wrapper{
+    position: relative;
+    margin-bottom: 60px;
+    .nav-onTop{
+        @include vert-align-center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        color: white;
+        box-shadow: $fancy-shadow;
+
+        .nav-item{
+            @include vert-align-center;
+            margin: 25px;
+
+            .titleEdit{
+                background: transparent;
+                border-radius: 0;
+                display: block;
+                width: 75%;
+                margin-top: 5px;
+                padding-bottom: 5px;
+                font-size: 16px;
+                border-bottom: 1.35px solid rgba(62, 194, 152, 1);
+                text-align: center;
+            }
+            .titleEdit::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                margin-bottom: 5px !important;
+                font-size: 20px !important;
+                color: #FFF !important;
+            }
+            .titleEdit::-moz-placeholder {
+                /* Firefox 19+ */
+                margin-bottom: 5px !important;
+                font-size: 20px !important;
+                color: #FFF !important;
+            }
+            .titleEdit:-ms-input-placeholder {
+                /* IE 10+ */
+                margin-bottom: 5px !important;
+                font-size: 20px !important;
+                color: #FFF !important;
+            }
+            .titleEdit:-moz-placeholder {
+                /* Firefox 18- */
+                margin-bottom: 5px !important;
+                font-size: 20px !important;
+                color: #FFF !important;
+            }
+
+            i{
+                margin-left: 10px;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+
+        .prof-pic{
+            height: 38px;
+            border-radius: 50px;
+        }
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #000;
+        opacity: 0.7;
+        box-shadow: $fancy-shadow;
+    }
+
+}
+
+.bottom-border{
+    position: absolute;
+    bottom: 0;
+    background: black;
+    height: 3px;
+    width: 100%;
+
+    .bar {
+    border-radius: 50px;
+	left: -5px;
+	position: absolute;
+	width: 300px;
+	height: 3px;
+	background: palegreen;
+    opacity: 1;
+	transition: all 10s linear;
+	animation-duration: 10s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+    animation-name: h-move;
+    }
+}
+
+
+@keyframes h-move {
+    0% {
+        left: -600px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+
+
+//shine
+.shine2 {
+    display: block;
+    position: absolute;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    padding: 0px 12px;
+    bottom: 0px;
+    left: -5px;
+    width: 600px;
+    height: 1px;
+    box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    transition: all 10s linear;
+	animation-duration: 10s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+    animation-name: shine-move;
+}
+
+.button:hover .shine {left: 24px;}
+
+@keyframes shine-move {
+    0% {
+        left: -600px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+.navbtn{
+    position: absolute;
+    right: 85px;
+    top: 11%;
+}

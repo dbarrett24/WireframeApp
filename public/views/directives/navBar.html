@@ -1,0 +1,55 @@
+<div class="nav-wrapper">
+    <nav>
+        <!--<div class="bottom-border">
+            <div class="bar"></div>
+        </div>-->
+        <div class="shine2"></div>
+    </nav>
+    <div class="nav-onTop">
+        <div class="nav-item">
+            <img src="./images/WireframeLogo-02.svg" style="height: 38px; margin-left: 20px">
+            <!--<img src="./images/WireframeLogo-03.svg" style="height: 30px; margin-left: 30px">-->
+            <input type="text" placeholder="Search projects" style="margin-left: 80px" ng-if="'projects' | isState">
+        </div>
+
+        <div class="nav-item" ng-if="'canvas' | isState">
+            <div class="nav-item" ng-hide="editorEnabled">
+                <h4 ng-click="editorEnabled=! editorEnabled">{{projectName}}</h4>
+                <i class="material-icons icon-small font-white" ng-click="editorEnabled=! editorEnabled">mode_edit</i>
+            </div>
+            <div class="nav-item" ng-show="editorEnabled">
+                <input class="titleEdit" ng-model="projectName">
+                <i class="material-icons icon-small font-white" ng-click="editorEnabled=! editorEnabled">check</i>
+            </div>
+
+        </div>
+
+        <div class="nav-item">
+            <h3 class="nav-item" ng-if="'projects | isState'">Welcome {{currentUser.username}}.</h3>
+        </div>
+
+
+        <div class="nav-item">
+            <!--SAVE PROJECT-->
+            <div class="button orange" id="save" text="Save Project" ng-if="'canvas' | isState" style="padding: 5px 11px"><i class="material-icons" style="margin: 0">save</i></div>
+
+
+            <!--TOOLTIP-->
+            <!--<div class="tooltip top tool-width animated">
+                <span class="tooltip__tip"></span>
+                <div class="tooltip__content font-black">Save Project</div>
+            </div>-->
+
+
+            <!--Log-IN-->
+            <a class="button green" href="/auth" ng-if="!isLoggedIn"><div class="shine"></div>Log In</a>
+            <!--SIGN UP-->
+            <a class="button green" href="/auth" ng-if="!isLoggedIn"><div class="shine "></div>Sign Up</a>
+            <!--LOGOUT-->
+            <a class="button red" href="/auth/logout" ng-if="isLoggedIn"><div class="shine"></div>Log Out</a>
+            <img class="prof-pic" ng-src="{{currentUser.picture}}">
+        </div>
+
+    </div>
+    
+</div>

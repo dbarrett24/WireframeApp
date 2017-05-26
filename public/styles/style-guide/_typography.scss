@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5, h6, p, a, button, html, body{
+    font-family: $app-font-family;
+    font-weight: $app-font-weight;
+    
+}
+
+h1, .h1 {
+    font-size: $font-size-h1;
+    line-height: 1.15em;
+    // margin-bottom: 20px;
+}
+h2, .h2{
+    font-size: $font-size-h2;
+    // margin-bottom: 20px;
+
+}
+h3, .h3{
+    font-size: $font-size-h3;
+    line-height: 1.4em;
+    margin: 20px 0 10px;
+}
+h4, .h4{
+    font-size: $font-size-h4;
+    line-height: 1.4em;
+}
+h5, .h5 {
+    font-size: $font-size-h5;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+h6, .h6{
+    font-size: $font-size-h6;
+}
+
+p{
+    line-height: 26px;
+}
+
+.font-black{
+    color: #000;
+}
+.font-white{
+    color: #FFF;
+}
+.font-gray{
+    color: #7A7A7A;
+}
+.font-charcoal{
+    color: #1A1B1F;
+}

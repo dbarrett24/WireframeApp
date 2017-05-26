@@ -1,0 +1,56 @@
+/* Just a modifier */
+.tool-width {
+
+  width: auto;
+  height: auto;
+}
+
+.tooltip {
+top: 64px;
+right: 257px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #FFF;
+  display: inline-block;
+  /* Just for test */
+  margin: 0 6px;
+  /* Just for test */
+  padding: 15px 25px;
+  position: absolute;
+  box-shadow: $fancy-shadow;
+  text-align: center;
+  
+}
+
+.tooltip__tip {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: inherit;
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+}
+.top .tooltip__tip, .bottom .tooltip__tip {
+  left: 50%;
+  margin-left: -6px;
+}
+.top .tooltip__tip {
+  top: -6px;
+}
+.bottom .tooltip__tip {
+  bottom: -6px;
+}
+.left .tooltip__tip, .right .tooltip__tip {
+  top: 50%;
+  margin-top: -6px;
+}
+.right .tooltip__tip {
+  right: -6px;
+}
+.left .tooltip__tip {
+  left: -6px;
+}

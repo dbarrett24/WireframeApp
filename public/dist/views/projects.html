@@ -1,0 +1,57 @@
+<div class="view-wrapper">
+    <div class="sidebar">
+        <div class="sidebar-menu font-white">
+            <div class="sidebar-item">
+                <i class="material-icons icon-large">folder_open</i>
+                <p>All Projects</p>
+            </div>
+            <div class="sidebar-item">
+                <i class="material-icons icon-large">access_time</i>
+                <p>Recent</p>
+            </div>
+            <div class="sidebar-item">
+                <i class="material-icons icon-large">star</i>
+                <p>Starred</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+        
+        <h4>Projects</h4>
+        <!--CARDS-->
+        <div class="card-add animated fadeInRight">
+            <div class="add-new">
+                <i class="material-icons icon-extra-large font-charcoal">add_circle_outline</i>
+                <h4 class="font-charcoal">New Project</h4>
+            </div>
+        </div>
+        <div class="card animated fadeInRight" ng-repeat="project in projects">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="smallGrid" width="8" height="8"patternUnits="userSpaceOnUse">
+                        <path d="M 8 0 L 0 0 0 8" fill="none" stroke="black"stroke-width="0.2" />
+                    </pattern>
+                    <pattern id="grid" width="80" height="80"patternUnits="userSpaceOnUse">
+                        <rect width="80" height="80" fill="url(#smallGrid)"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+            <div class="card-footer">
+                <p ng-model="isFav.wf_id" ng-init="isFav.wf_id=project.wf_id"ui-sref="mycanvas({id: project.wf_id})">{{project.wf_name}}</p>
+                <!--EMPTY STAR-->
+                <div ng-model="isFav.fav_wf" ng-init="isFav.fav_wf=project.fav_wf"ng-click="updateFav(isFav, $index)" ng-hide="project.fav_wf">
+                    <i class="material-icons star">star_border</i>
+                </div>
+                <!--Filled STAR-->
+                <div ng-model="isFav.fav_wf" ng-init="isFav.fav_wf=project.fav_wf"ng-click="updateFav(isFav, $index)" ng-show="project.fav_wf">
+                    <i class="material-icons star">star</i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
